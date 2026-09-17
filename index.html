@@ -51,9 +51,16 @@
       </div>
     </div>
 
-    <button class="burger" aria-label="Меню" id="burgerBtn">
-      <span></span><span></span><span></span>
-    </button>
+    <div class="header__actions">
+      <button class="cart-btn" id="cartBtn" aria-label="Корзина">
+        <svg viewBox="0 0 24 24" class="cart-btn__icon"><path d="M7 4h-2l-1 2v1h2l3.6 7.6-1.3 2.4c-.6 1.1.2 2.5 1.5 2.5h9.2v-2h-9.2l.9-1.6h6.8c.8 0 1.4-.4 1.7-1.1l3.3-6.4c.4-.7-.1-1.6-.9-1.6h-13.4l-.6-1.2c-.2-.4-.6-.6-1-.6ZM8 20a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3Zm9 0a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3Z" fill="currentColor"/></svg>
+        <span class="cart-btn__count" id="cartCount" hidden>0</span>
+      </button>
+
+      <button class="burger" aria-label="Меню" id="burgerBtn">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
   </div>
 
   <nav class="nav nav--mobile" id="mobileNav">
@@ -90,7 +97,7 @@
         <h3 class="card__title">Беляш</h3>
         <p class="card__desc">Мука, мясо, лук, соль, перец, масло, дрожжи, вода</p>
         <div class="card__price"><span class="price">90 р.</span><span class="price price--old">120 р.</span></div>
-        <button class="btn">Заказать</button>
+        <button class="btn" data-id="belyash" data-name="Беляш" data-price="90">Заказать</button>
       </article>
 
       <article class="card">
@@ -98,7 +105,7 @@
         <h3 class="card__title">Эчпочмак</h3>
         <p class="card__desc">Мука, масло, кефир, яйцо, сода, соль; начинка: говядина, картофель, лук, соль, перец</p>
         <div class="card__price"><span class="price">80 р.</span><span class="price price--old">160 р.</span></div>
-        <button class="btn">Заказать</button>
+        <button class="btn" data-id="echpochmak" data-name="Эчпочмак" data-price="80">Заказать</button>
       </article>
 
       <article class="card">
@@ -106,7 +113,7 @@
         <h3 class="card__title">Баурсак</h3>
         <p class="card__desc">Мука, молоко, яйца, масло, дрожжи, соль</p>
         <div class="card__price"><span class="price">150 р.</span><span class="price price--old">200 р.</span></div>
-        <button class="btn">Заказать</button>
+        <button class="btn" data-id="baursak" data-name="Баурсак" data-price="150">Заказать</button>
       </article>
 
       <article class="card">
@@ -114,7 +121,7 @@
         <h3 class="card__title">Губадия</h3>
         <p class="card__desc">Пшено, яйца, масло, творог, рис, мясо, лук, изюм, курага, мед</p>
         <div class="card__price"><span class="price">120 р.</span><span class="price price--old">200 р.</span></div>
-        <button class="btn">Заказать</button>
+        <button class="btn" data-id="gubadiya" data-name="Губадия" data-price="120">Заказать</button>
       </article>
 
       <article class="card">
@@ -122,7 +129,7 @@
         <h3 class="card__title">Чак Чак</h3>
         <p class="card__desc">Пшеничная мука, яйца, мед, сахар, масло, ваниль, соль</p>
         <div class="card__price"><span class="price">70 р.</span><span class="price price--old">120 р.</span></div>
-        <button class="btn">Заказать</button>
+        <button class="btn" data-id="chakchak" data-name="Чак Чак" data-price="70">Заказать</button>
       </article>
 
       <article class="card">
@@ -130,7 +137,7 @@
         <h3 class="card__title">Корт</h3>
         <p class="card__desc">Сливки, мед, ваниль, ягоды, миндаль</p>
         <div class="card__price"><span class="price">150 р.</span><span class="price price--old">200 р.</span></div>
-        <button class="btn">Заказать</button>
+        <button class="btn" data-id="kort" data-name="Корт" data-price="150">Заказать</button>
       </article>
 
     </div>
@@ -149,7 +156,7 @@
         <h3 class="card__title">Азу</h3>
         <p class="card__desc">Свинина, Огурцы, Картофель, Соль</p>
         <div class="card__price"><span class="price">150 р.</span><span class="price price--old">200 р.</span></div>
-        <button class="btn">Заказать</button>
+        <button class="btn" data-id="azu" data-name="Азу" data-price="150">Заказать</button>
       </article>
 
       <article class="card">
@@ -157,7 +164,7 @@
         <h3 class="card__title">Токмач</h3>
         <p class="card__desc">Говядина, мука, яйца, вода, лук, морковь, масло</p>
         <div class="card__price"><span class="price">150 р.</span><span class="price price--old">200 р.</span></div>
-        <button class="btn">Заказать</button>
+        <button class="btn" data-id="tokmach" data-name="Токмач" data-price="150">Заказать</button>
       </article>
 
       <article class="card">
@@ -165,7 +172,7 @@
         <h3 class="card__title">Бешбармак</h3>
         <p class="card__desc">Говядина, домашняя лапша, лук, морковь, перец, соль, зелень</p>
         <div class="card__price"><span class="price">180 р.</span><span class="price price--old">300 р.</span></div>
-        <button class="btn">Заказать</button>
+        <button class="btn" data-id="beshbarmak" data-name="Бешбармак" data-price="180">Заказать</button>
       </article>
 
     </div>
@@ -254,6 +261,47 @@
     width="100%" height="420" frameborder="0" loading="lazy"
     title="Карта расположения"></iframe>
 </div>
+
+<aside class="cart" id="cartDrawer" aria-label="Корзина">
+  <div class="cart__header">
+    <h3>Корзина</h3>
+    <button class="cart__close" id="cartCloseBtn" aria-label="Закрыть корзину">
+      <svg viewBox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+    </button>
+  </div>
+
+  <div class="cart__body" id="cartBody"></div>
+
+  <div class="cart__footer" id="cartFooter">
+    <div class="delivery-toggle" id="deliveryToggle">
+      <button type="button" class="delivery-toggle__btn is-active" data-mode="delivery">Доставка</button>
+      <button type="button" class="delivery-toggle__btn" data-mode="pickup">Самовывоз</button>
+    </div>
+
+    <div class="cart__address" id="cartAddressWrap">
+      <label for="cartAddress">Адрес доставки</label>
+      <input type="text" id="cartAddress" placeholder="Улица, дом, квартира">
+      <p class="cart__error" id="cartAddressError" hidden>Укажите адрес доставки</p>
+    </div>
+
+    <p class="cart__pickup-note" id="cartPickupNote" hidden>Заберите заказ по адресу: г. Москва, Биляшевский 1к, ежедневно с 9:00 до 21:00</p>
+
+    <div class="cart__total">
+      <span>Итого</span>
+      <span id="cartTotal">0 р.</span>
+    </div>
+
+    <button type="button" class="btn btn--full" id="cartCheckoutBtn">Оформить заказ</button>
+  </div>
+
+  <div class="cart__success" id="cartSuccess" hidden>
+    <svg viewBox="0 0 24 24" class="cart__success-icon"><path d="M20 7L9 18l-5-5" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    <h4>Заказ оформлен!</h4>
+    <p id="cartSuccessText">Мы скоро свяжемся с вами для подтверждения.</p>
+    <button type="button" class="btn btn--full" id="cartContinueBtn">Продолжить покупки</button>
+  </div>
+</aside>
+<div class="cart-backdrop" id="cartBackdrop"></div>
 
 <script src="script.js"></script>
 </body>
